@@ -87,18 +87,6 @@ let g:syntastic_check_on_wq = 0
 " terminator is a bitch
 let g:move_key_modifier = 'C'
 
-" bind file tree toggle
-map <C-n> :NERDTreeToggle<CR>
-
-" open file tree when opening a directory
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-
-" NERDTress highlight the full name
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
-
 " tell the completion engine where the semantic completers are
 let g:completor_python_binary = '/usr/lib/python3.6/site-packages/jedi' " python
 let g:completor_racer_binary  = '/usr/bin/racer'                        " rust
