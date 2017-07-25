@@ -1,0 +1,123 @@
+#if __has_include(".extend.Xresources")
+#include ".extend.Xresources"
+#endif
+! ^ The above lines are no comments!
+! ! Leave them as they are if a file ~/.extend.Xresources is being used on your system.
+! config can be added there or also here below.
+! For comments use "!"
+
+Xft.dpi: 96
+Xft.antialias: false
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+URxvt.geometry: 115x30
+URxvt.scrollBar: false
+URxvt.font: -*-tamzenforpowerline-medium-*-*-*-14-*-*-*-*-*-*-*
+
+! add link clicking
+URxvt.perl-lib:          /usr/lib/urxvt/perl/
+URxvt.perl-ext-common:   default,matcher
+URxvt.urlLauncher:       /usr/bin/vivaldi-stable
+URxvt.matcher.button:    1
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+
+URxvt.letterSpace: 0
+URxvt.urgentOnBell: true
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!! COLORS (serious business) !!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! background / fade color / color 8
+#define base03           #25323C
+! color 0
+#define base02           #313C4E
+! pointer color background / color 10
+#define base01           #586e75
+! color 11
+#define base00           #657b83
+! foreground / color 12
+#define base0            #839496
+! cursor color / pointer color foreground / color 14
+#define base1            #93a1a1
+! color 7
+#define base2            #E2DED3
+! color 15
+#define base3            #F6F6F2
+! color 1
+#define red              #9A4C4C
+! color 2
+#define green            #87AF5F
+! color 3
+#define yellow           #D7D787
+! color 4
+#define blue             #5F87AF
+! color 5
+#define magenta          #A25576
+! color 6
+#define cyan             #87AFD7
+! color 9
+#define orange           #AF6656
+! color 13
+#define violet           #8787AF
+
+*background:             base03
+*foreground:             base0
+*fadeColor:              base03
+*cursorColor:            base1
+*pointerColorBackground: base01
+*pointerColorForeground: base1
+
+!! black dark/light
+*color0:                 base02
+*color8:                 base03
+!! red dark/light
+*color1:                 red
+*color9:                 orange
+!! green dark/light
+*color2:                 green
+*color10:                base01
+!! yellow dark/light
+*color3:                 yellow
+*color11:                base00
+!! blue dark/light
+*color4:                 blue
+*color12:                base0
+!! magenta dark/light
+*color5:                 magenta
+*color13:                violet
+!! cyan dark/light
+*color6:                 cyan
+*color14:                base1
+!! white dark/light
+*color7:                 base2
+*color15:                base3
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+
+rofi.font:    tamzenforpowerline 11
+rofi.width:   100
+rofi.padding: 500
+
+! Use extended color scheme
+rofi.color-enabled:                  true
+
+!                                    row            text     alt row        text     highlighted text
+! Color scheme for normal row
+rofi.color-normal:                   argb:00000000, base0,   argb:33313C4E, base0,   #333
+! Color scheme for urgent row
+rofi.color-urgent:                   argb:00000000, magenta, argb:11FFFFFF, magenta, #333
+! Color scheme for active row
+rofi.color-active:                   argb:00000000, blue,    argb:11FFFFFF, blue,  #333
+
+!                                    background     outline  scrollbar
+! Color scheme window
+rofi.color-window:                   argb:ee25323C, base02,  argb:22959190
+! Separator style (none, dash, solid)
+rofi.separator-style:                solid

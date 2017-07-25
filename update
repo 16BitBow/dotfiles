@@ -1,0 +1,53 @@
+#! /bin/bash
+#  gather dotfiles in home dir
+#  so i dont lose all my shit again
+#  ffs
+
+LRED='\033[1;31m'
+WHITE='\033[1;37m'
+NC='\033[0m'
+
+echo
+echo -e "################### ~ level configs ###################"
+
+echo -e "Copying ${LRED}.profile${NC}..."
+cp $HOME/.profile .
+
+echo -e "Copying ${LRED}.vimrc${NC}..."
+cp $HOME/.vimrc .
+
+echo -e "Copying ${LRED}.xinitrc${NC}..."
+cp $HOME/.xinitrc .
+
+echo -e "Copying ${LRED}.Xresources${NC}..."
+cp $HOME/.Xresources .
+
+echo -e "Copying ${LRED}.zshrc${NC}..."
+cp $HOME/.zshrc .
+
+echo -e "#################### .config folders ####################"
+
+echo -e "Copying ${LRED}bspwm${NC}..."
+cp -r $HOME/.config/bspwm/ ./.config
+
+echo -e "Copying ${LRED}cava${NC}..."
+cp -r $HOME/.config/cava/ ./.config
+
+echo -e "Copying ${LRED}mpv${NC}..."
+cp -r $HOME/.config/mpv/ ./.config
+
+echo -e "Copying ${LRED}neofetch${NC}..."
+cp -r $HOME/.config/neofetch/ ./.config
+
+echo -e "Copying ${LRED}polybar${NC}..."
+cp -r $HOME/.config/polybar/ ./.config
+
+echo -e "Copying ${LRED}powerline${NC}..."
+cp -r $HOME/.config/powerline/ ./.config
+
+echo -e "Copying ${LRED}sxhkd${NC}..."
+cp -r $HOME/.config/sxhkd/ ./.config
+
+###############################################################
+echo
+echo -e "${WHITE}Done${NC}!"

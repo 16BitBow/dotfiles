@@ -1,0 +1,193 @@
+[settings]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; colors
+base0 = #25323C
+base1 = #313C4E
+base2 = #3B4B65
+base3 = #495D7E
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bar
+bar_fg            = #ccffffff
+bar_bg            = ${self.base0}
+icon_spacing      = 1
+default_padding   = 3
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; date
+date_bg           = ${self.base3}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bspwm
+default_fg        = #dd
+empty_fg          = #22
+default_bg        = ${self.base2}
+focused_bg        = #553f3f3f
+flag_bg           = ${self.base1}
+default_font      = 3
+workspace_padding = ${self.default_padding}
+flag_padding      = 1
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; xwindow
+label_maxlen      = 100
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; battery
+battery_bg        = ${self.base1}
+battery_fg        = ${self.bar_fg}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; weather
+weather_bg        = ${self.base2}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; tray
+tray_bg           = ${self.base3}
+tray_padding      = 1
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[bar/custom]
+monitor = eDP-1
+bottom = false
+width = 1890
+height = 35
+offset-x = 15
+offset-y = 15
+
+foreground = ${settings.bar_fg}
+background = ${settings.bar_bg}
+
+fixed-center = false
+wm-restack = bspwm
+
+spacing = ${settings.icon_spacing}
+
+font-0 = TamzenForPowerline:style=regular:pixelsize=11;1
+font-1 = TamzenForPowerline:style=regular:pixelsize=11;2
+font-2 = FontAwesome:size=8;2
+font-3 = Material\ Icons:size=10;3
+font-4 = Noto\ Sans:style=regular:size=8;0
+font-5 = Unifont:size=10;1
+
+modules-left   = date bspwm
+modules-center = title
+modules-right  = battery weather
+
+tray-position = right
+tray-padding = ${settings.tray_padding}
+tray-background = ${settings.tray_bg}
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+full-at = 98
+
+format-full-background        = ${settings.battery_bg}
+format-charging-background    = ${settings.battery_bg}
+format-discharging-background = ${settings.battery_bg}
+format-full-foreground        = ${settings.battery_fg}
+format-charging-foreground    = ${settings.battery_fg}
+format-discharging-foreground = ${settings.battery_fg}
+format-full-padding           = ${settings.default_padding}
+format-charging-padding       = ${settings.default_padding}
+format-discharging-padding    = ${settings.default_padding}
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+[module/bspwm]
+type = internal/bspwm
+
+ws-icon-1 = web;
+ws-icon-4 = chat;
+ws-icon-3 = music;
+ws-icon-0 = term;
+ws-icon-2 = code;
+ws-icon-default = 
+
+format = <label-state><label-mode>
+
+label-focused = %icon%
+label-focused-foreground = #fff
+label-focused-background = ${settings.focused_bg}
+label-focused-underline = #00000000
+label-focused-font = ${settings.default_font}
+label-focused-padding = ${settings.workspace_padding}
+
+label-occupied = %icon%
+label-occupied-foreground = ${settings.default_fg}
+label-occupied-background = ${settings.default_bg}
+label-occupied-underline = #00000000
+label-occupied-font = ${settings.default_font}
+label-occupied-padding = ${settings.workspace_padding}
+
+label-urgent = %icon%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-underline = #9b0a20
+label-urgent-font = ${settings.default_font}
+label-urgent-padding = ${settings.workspace_padding}
+
+label-empty = %icon%
+label-empty-foreground = ${settings.empty_fg}
+label-empty-background = ${settings.default_bg}
+label-empty-font = ${settings.default_font}
+label-empty-padding = ${settings.workspace_padding}
+
+label-monocle = 
+label-monocle-underline = ${self.label-focused-underline}
+label-monocle-background = ${settings.flag_bg}
+label-monocle-padding = ${settings.flag_padding}
+
+label-locked = 
+label-locked-foreground = ${settings.default_fg}
+label-locked-background = ${settings.flag_bg}
+label-locked-underline = ${self.label-monocle-underline}
+label-locked-padding = ${settings.flag_padding}
+
+label-sticky = 
+label-sticky-foreground = ${settings.default_fg}
+label-sticky-background = ${settings.flag_bg}
+label-sticky-underline = ${self.label-monocle-underline}
+label-sticky-padding = ${settings.flag_padding}
+
+label-private = 
+label-private-foreground = ${settings.default_fg}
+label-private-background = ${settings.flag_bg}
+label-private-underline = ${self.label-monocle-underline}
+label-private-padding = ${settings.flag_padding}
+
+[module/bspwm-tmp]
+type = internal/bspwm
+format = <label-state>
+label-active = 
+label-active-padding = 1
+label-occupied = 
+label-occupied-padding = 1
+label-empty = 
+label-empty-padding = 1
+
+[module/title]
+type = internal/xwindow
+label = %title%
+label-maxlen = ${settings.label_maxlen}
+
+[module/date]
+type = internal/date
+label-font=2
+format-padding = ${settings.default_padding}
+format-background = ${settings.date_bg}
+date = %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
+
+[module/weather]
+type = custom/script
+interval = 60
+format = <label>
+format-background = ${settings.weather_bg}
+format-prefix = "  "
+format-padding = ${settings.default_padding}
+exec = sh ~/Scripts/weather.sh pdx
