@@ -85,3 +85,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 . $HOME/.local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# Alias for chrome-remote-desktop
+alias chrome-remote-desktop='google-chrome-stable --app-id=gbchcmhmhahfdphkhkmpfmihenigjmpp'
