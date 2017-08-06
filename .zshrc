@@ -88,3 +88,4 @@ source $ZSH/oh-my-zsh.sh
 
 # Alias for chrome-remote-desktop
 alias chrome-remote-desktop='google-chrome-stable --app-id=gbchcmhmhahfdphkhkmpfmihenigjmpp'
+alias e='exa -l'
