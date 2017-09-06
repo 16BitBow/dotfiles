@@ -1,0 +1,45 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-image: url("stars.png");
+	background-repeat: repeat-y;
+
+	margin: 0;
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.search {
+	width: 620px;
+	position: absolute;
+	top: calc(50% - 12.5px);
+	left: calc(50% - 300px);
+	/*margin: 0 auto;*/
+}
+
+.search input {
+	transition: box-shadow 0.3s;
+
+	width: 600px;
+	height: 25px;
+	padding: 0 10px 0 10px;
+	color: #F6EDE2;
+	background: #25323C;
+
+	outline: none;
+	border: none;
+	border-bottom: 5px solid #3B4B65;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.search input:focus {
+	outline: none;
+	box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.5);
+}
