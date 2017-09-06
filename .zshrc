@@ -51,7 +51,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,4 +88,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Alias for chrome-remote-desktop
 alias chrome-remote-desktop='google-chrome-stable --app-id=gbchcmhmhahfdphkhkmpfmihenigjmpp'
-alias e='exa -l'
+alias e='exa -l --sort=type'
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=1
