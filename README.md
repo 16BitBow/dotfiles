@@ -1,11 +1,9 @@
 # Screenshots
-![Empty workspace.](http://imgur.com/T90m5XW.png)
-![Vim and some color scripts.](http://i.imgur.com/c95vIJj.png)
+![Empty workspace.](https://dl.dropboxusercontent.com/s/q7x01n4yfksfsi3/term_003.png)
+![Vim.](https://dl.dropboxusercontent.com/s/mr48hf6z04un3e5/code%21_002.png)
 
 ## Other links
-* [This](https://dl.dropboxusercontent.com/s/saodf0b7h8yrr36/58433143_p0_01.png) is the wallpaper in the screenshots.
-* [Without the blur and stuff.](https://www.pixiv.net/member_illust.php?mode=medium&illust_id=58433143)
+* The [wallpaper](https://dl.dropboxusercontent.com/s/v9j12k1dr69p9g7/moon.png) I made for this.
 * The font used is [Tamzen](https://github.com/sunaku/tamzen-font).
-* The [weather script](https://www.reddit.com/r/bash/comments/3u9amh/is_there_a_bash_script_that_prints_the_current/cxczwh0/) referenced in the polybar config.
 
 *If I don't upload this stuff then there is a 100% chance my laptop will die and I'll have to start over.*
