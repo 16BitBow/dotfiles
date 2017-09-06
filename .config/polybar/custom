@@ -1,34 +1,35 @@
 [settings]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; colors
 base0 = #25323C
-base1 = #313C4E
-base2 = #3B4B65
-base3 = #495D7E
+base1 = #25323C
+base2 = #25323C
+base3 = #25323C
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bar
-bar_fg            = #ccffffff
-bar_bg            = ${self.base0}
+bar_fg            = #ccF6EDE2 
+bar_bg            = #1b252c
 icon_spacing      = 1
 default_padding   = 3
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; date
-date_bg           = ${self.base3}
+date_bg           = ${self.bar_bg}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bspwm
 default_fg        = #dd
-empty_fg          = #22
-default_bg        = ${self.base2}
-focused_bg        = #553f3f3f
-flag_bg           = ${self.base1}
+empty_fg          = #55
+default_bg        = ${self.bar_bg}
+focused_bg        = #3b4b65
+flag_bg           = ${self.base0}
+;#1B252C
 default_font      = 3
 workspace_padding = ${self.default_padding}
 flag_padding      = 1
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; xwindow
 label_maxlen      = 100
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; battery
-battery_bg        = ${self.base1}
+battery_bg        = ${self.bar_bg}
 battery_fg        = ${self.bar_fg}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; weather
-weather_bg        = ${self.base2}
+weather_bg        = ${self.bar_bg}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; tray
-tray_bg           = ${self.base3}
+tray_bg           = ${self.bar_bg}
 tray_padding      = 1
 
 
@@ -36,13 +37,13 @@ tray_padding      = 1
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-[bar/custom]
+[bar/top]
 monitor = eDP-1
 bottom = false
-width = 1890
-height = 35
-offset-x = 15
-offset-y = 15
+width = 100%
+height = 25
+offset-x = 0
+offset-y = 0
 
 foreground = ${settings.bar_fg}
 background = ${settings.bar_bg}
@@ -61,7 +62,10 @@ font-5 = Unifont:size=10;1
 
 modules-left   = date bspwm
 modules-center = title
-modules-right  = battery weather
+modules-right  = battery network weather
+
+border-bottom-size  = 5
+border-bottom-color = ${settings.focused_bg} 
 
 tray-position = right
 tray-padding = ${settings.tray_padding}
@@ -114,7 +118,7 @@ format = <label-state><label-mode>
 label-focused = %icon%
 label-focused-foreground = #fff
 label-focused-background = ${settings.focused_bg}
-label-focused-underline = #00000000
+label-focused-underline = #ff000000
 label-focused-font = ${settings.default_font}
 label-focused-padding = ${settings.workspace_padding}
 
@@ -178,16 +182,33 @@ label-maxlen = ${settings.label_maxlen}
 
 [module/date]
 type = internal/date
-label-font=2
+label-font = 2
 format-padding = ${settings.default_padding}
 format-background = ${settings.date_bg}
-date = %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
+date = %%{F#cc}%Y-%m-%d%%{F-}  %%{F#ff}%H:%M%%{F-}
+
+[module/network]
+type = internal/network
+interface = wlo1
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-connected-padding = ${settings.default_padding}
+format-disconnected-padding = ${settings.default_padding}
+
+label-connected =  %upspeed%  %downspeed%
+label-connected-foreground = ${settings.default_fg}
+label-disconnected = disconnected
+label-disconnected-foreground = ${settings.default_fg}
+
 
 [module/weather]
 type = custom/script
-interval = 60
+interval = 30
 format = <label>
 format-background = ${settings.weather_bg}
 format-prefix = "  "
 format-padding = ${settings.default_padding}
-exec = sh ~/Scripts/weather.sh pdx
+exec = ~/.config/polybar/weather
+
+; vim:ft=dosini
