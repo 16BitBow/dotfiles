@@ -1,7 +1,7 @@
 # Screenshots
 ![Empty workspace.](https://dl.dropboxusercontent.com/s/q7x01n4yfksfsi3/term_003.png)
 ![Vim.](https://dl.dropboxusercontent.com/s/mr48hf6z04un3e5/code%21_002.png)
-
+![The very basic homepage I made.](https://dl.dropboxusercontent.com/s/qql0spjyu2r9gjg/web_001.png)
 ## Other links
 * The [wallpaper](https://dl.dropboxusercontent.com/s/v9j12k1dr69p9g7/moon.png) I made for this.
 * The font used is [Tamzen](https://github.com/sunaku/tamzen-font).
