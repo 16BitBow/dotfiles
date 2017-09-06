@@ -4,7 +4,10 @@ sxhkd &
 
 bspc monitor -d web chat music term code 
 
-bspc config border_width          0
+bspc config border_width         0
+bspc config active_border_color "#3B4B65"
+bspc config normal_border_color "#25323C"
+
 bspc config window_gap           15
 
 bspc config split_ratio          0.52
