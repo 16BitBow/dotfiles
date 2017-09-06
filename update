@@ -51,6 +51,11 @@ cp -r $HOME/.config/powerline/ ./.config
 echo -e "Copying ${BLUE}sxhkd${NC}..."
 cp -r $HOME/.config/sxhkd/ ./.config
 
+echo -e "######################### other #########################"
+
+echo -e "Copying ${BLUE}homepage${NC}..."
+cp -r $HOME/Documents/Dev/random/homepage/ ./
+
 ###############################################################
 echo
 echo -e "${WHITE}Done${NC}!"
