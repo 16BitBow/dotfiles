@@ -33,9 +33,11 @@ URxvt.urgentOnBell: true
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ! background / fade color / color 8
-#define base03           #25323C
+#define base03           #2F343F
+!#25323C
 ! color 0
-#define base02           #313C4E
+#define base02           #21252B
+!#313C4E
 ! pointer color background / color 10
 #define base01           #586e75
 ! color 11
@@ -118,6 +120,6 @@ rofi.color-active:                   argb:00000000, blue,    argb:11FFFFFF, blue
 
 !                                    background     outline  scrollbar
 ! Color scheme window
-rofi.color-window:                   argb:ee25323C, base02,  argb:22959190
+rofi.color-window:                   argb:dd1E222B, base02,  argb:22959190
 ! Separator style (none, dash, solid)
 rofi.separator-style:                solid
