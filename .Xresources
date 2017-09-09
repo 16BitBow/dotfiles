@@ -36,7 +36,7 @@ URxvt.urgentOnBell: true
 #define base03           #2F343F
 !#25323C
 ! color 0
-#define base02           #21252B
+#define base02           #393F4C
 !#313C4E
 ! pointer color background / color 10
 #define base01           #586e75
