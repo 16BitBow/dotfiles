@@ -16,6 +16,17 @@ body {
 	position: relative;
 }
 
+
+/* 
+.sidebar {
+	width: 50px;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.1);
+
+	display: flex;
+	flex-direction: column;
+} */
+
 .search {
 	width: 620px;
 	position: absolute;
@@ -31,11 +42,11 @@ body {
 	height: 25px;
 	padding: 0 10px 0 10px;
 	color: #F6EDE2;
-	background: #25323C;
+	background: #2F343F;
 
 	outline: none;
 	border: none;
-	border-bottom: 5px solid #3B4B65;
+	border-bottom: 5px solid #383E4A;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
