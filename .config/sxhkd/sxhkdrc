@@ -16,12 +16,12 @@ super + Tab
 
 # file browser
 super + e
-	thunar
+	nautilus -w
 
-! internet browser
+# internet browser
 super + v
 	vivaldi-stable
-! ^ private window
+# private window
 super + shift + v
 	vivaldi-stable -incognito
 
