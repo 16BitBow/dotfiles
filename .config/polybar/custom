@@ -6,7 +6,7 @@ base2 = #383E4A
 base3 = #383E4A
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bar
 bar_fg            = #ccF6EDE2 
-bar_bg            = #21252B
+bar_bg            = #2F343F
 icon_spacing      = 1
 default_padding   = 3
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; date
@@ -15,7 +15,7 @@ date_bg           = ${self.bar_bg}
 default_fg        = #dd
 empty_fg          = #55
 default_bg        = ${self.bar_bg}
-focused_bg        = #2F343F
+focused_bg        = #393F4C
 flag_bg           = ${self.base0}
 ;#1B252C
 default_font      = 3
