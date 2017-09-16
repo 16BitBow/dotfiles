@@ -54,7 +54,7 @@ cp -r $HOME/.config/sxhkd/ ./.config
 echo -e "######################### other #########################"
 
 echo -e "Copying ${BLUE}homepage${NC}..."
-cp -r $HOME/Documents/Dev/random/homepage/ ./
+cp -r $HOME/Documents/dev/random/homepage/ ./
 
 ###############################################################
 echo
