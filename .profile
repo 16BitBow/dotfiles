@@ -7,6 +7,9 @@
 
 [[ -f ~/.extend.profile ]] && . ~/.extend.profile
 
+# MPD daemon start (if no other user instance exists)
+[ ! -s ~/.config/mpd/pid ] && mpd
+
 export PATH=$PATH:$HOME/.local/bin
 export POWERLINE_COMMAND=powerline
 export POWERLINE_CONFIG_COMMAND=powerline-config
