@@ -34,18 +34,16 @@ URxvt.urgentOnBell: true
 
 ! background / fade color / color 8
 #define base03           #2F343F
-!#25323C
 ! color 0
 #define base02           #393F4C
-!#313C4E
 ! pointer color background / color 10
-#define base01           #586e75
+#define base01           #757C97 
 ! color 11
-#define base00           #657b83
+#define base00           #9FA4B7 
 ! foreground / color 12
-#define base0            #839496
+#define base1            #D6D8E0 
 ! cursor color / pointer color foreground / color 14
-#define base1            #93a1a1
+#define base0            #BCBFCD 
 ! color 7
 #define base2            #E2DED3
 ! color 15
