@@ -47,8 +47,8 @@
 # 
 # For alsa 'source' will be the capture device.
 # For fifo 'source' will be the path to fifo-file.
-; method = pulse
-; source = auto
+method = pulse
+; source = alsa_output.pci-0000_00_1b.0.analog-stereo.monitor
 
 ; method = alsa
 ; source = hw:Loopback,1
@@ -69,7 +69,7 @@
 # Visual styles. Can be 'stereo' or 'mono'.
 # 'stereo' mirrors both channels with low frequencies in center.
 # 'mono' averages both channels and outputs left to right lowest to highest frequencies.
-; style = stereo
+style = stereo
 
 # Raw output target. A fifo will be created if target does not exist.
 ; raw_target = /dev/stdout
@@ -93,10 +93,19 @@
 [color]
 
 # Colors can be one of seven predefined: black, blue, cyan, green, magenta, red, white, yellow.
-# Or defined by hex code '#xxxxxx' (hex code must be within '').
+# Or defined by hex code '#xxxxxx' (hex code must be within ''). User defined colors requires a
+# terminal that can change color definitions such as Gnome-terminal or rxvt.
 ; background = black
 ; foreground = cyan
+
+# Gradient mode, only hex defined colors are supported, background must also be defined in hex
+# or remain commented out. 1 = on, 0 = off. Warning: for certain terminal emulators cava will
+# not able to restore color definitions on exit, simply restart your terminal to restore colors.
 gradient = 1
+gradient_color_1 = '#87AF5F'
+gradient_color_2 = '#A25576'
+
+
 
 [smoothing]
 
@@ -105,7 +114,7 @@ gradient = 1
 ; integral = 0.7
 
 # Disables or enables the so-called "Monstercat smoothing". Set to 0 to disable.
- monstercat = 1
+monstercat = 1
 
 # Set gravity multiplier for "drop off". Higher values means bars will drop faster.
 # Accepts only non-negative values. 0.5 means half gravity, 2 means double. Set to 0 to disable "drop off".
