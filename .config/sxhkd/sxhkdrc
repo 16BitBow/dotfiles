@@ -16,7 +16,7 @@ super + Tab
 
 # file browser
 super + e
-	nautilus -w
+	thunar
 
 # internet browser
 super + v
@@ -24,6 +24,9 @@ super + v
 # private window
 super + shift + v
 	vivaldi-stable -incognito
+
+super + Print
+	spectacle
 
 # make sxhkd reload its configuration files:
 super + Escape
