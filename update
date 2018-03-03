@@ -1,6 +1,6 @@
 #! /bin/bash
 #  gather dotfiles in home dir
-#  so i dont lose all my shit again
+#  so i dont lose all my stuff again
 #  ffs
 
 BLUE='\033[0;34m'
